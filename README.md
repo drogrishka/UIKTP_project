@@ -1,1 +1,4 @@
-# UIKTP team project
+# UIKTP project
+BrainyBuddies - Educational web application for kids
+
+  
