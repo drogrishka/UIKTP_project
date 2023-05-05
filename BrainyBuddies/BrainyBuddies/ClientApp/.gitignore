@@ -7,7 +7,7 @@
 /coverage
 
 # production
-/build
+/build/
 *.suo
 *.user
 _ReSharper.*/
