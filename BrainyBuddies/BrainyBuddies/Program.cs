@@ -1,7 +1,11 @@
+using BrainyBuddies.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddDbContext<CourseContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("BrainyBuddiesDB")));
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
