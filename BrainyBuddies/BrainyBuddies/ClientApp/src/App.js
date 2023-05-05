@@ -14,7 +14,7 @@ const App = () => {
 
     return (
         <div className="container">
-            <h1>Employees</h1>
+            <h1>Courses</h1>
             <div className="row">
                 <div className="col-sm-12">
                     <table className="table table-striped">
