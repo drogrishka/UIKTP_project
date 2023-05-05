@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 
 namespace BrainyBuddies.Models
@@ -25,13 +21,6 @@ namespace BrainyBuddies.Models
         public string Predmet { get; set; }
         [Display(Name = "Опис")]
         public string Opis { get; set; }
-        public virtual List<Category> categories { get; set; }
-
-        public Course()
-        {
-            categories = new List<Category>();
-        }
-
-
+    
     }
 }
