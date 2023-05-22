@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Times New Roman";
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10rem;
+}
+.sign-up {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    border: 3px solid black;
+    border-bottom: none;
+    border-top-left-radius: 0.9rem;
+    border-top-right-radius: 0.9rem;
+    background-color:rgba(76, 122, 52, 0.8);
+    color: white;   
+}
+.content {
+    border: 3px solid black;
+    border-bottom-left-radius: 0.9rem;
+    border-bottom-right-radius: 0.9rem;
+    padding: 2rem;
+    background-color: rgba(247, 246, 246, 0.9);
+}
+.content input{
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    margin: auto auto 1rem auto;
+    width: 50%;
+    color: rgba(254, 198, 61, 0.75); 
+    font-size: 1.7rem;
+    background-color: rgba(247, 246, 246, 0.9);;
+}
+.content input::placeholder{
+    color: rgba(254, 198, 61, 0.75); 
+    font-size: 1.7rem;
+}
+.content button {
+    margin: 3% 30%;
+    border: 2px solid gray;
+    width: 40%;
+    padding: 0.9rem;
+    color: rgba(254, 198, 61, 0.75); 
+    background-color: white;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+}
+.content button:hover {
+    background-color: rgba(76, 122, 52, 0.8);
+}
+.icon {
+    font-size: 2rem;
+}
+.icons {
+    margin: auto 0 auto 1rem;
+}
+.content h2 {
+    font-weight: 600;
+}
+.content h2,h4 {
+    color: rgba(76, 122, 52, 0.8);
+    margin: auto;
+    text-align: center;
+    padding: 0.2rem;
+}
