@@ -4,25 +4,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BrainyBuddies.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace BrainyBuddies.Controllers
 {
+    [Authorize(Roles ="teacher")]
     [Route("api/[controller]")]
     [ApiController]
     public class CoursesController : ControllerBase
     {
-        private readonly CourseContext _courseContext;
+        private readonly BrainybuddiesDbContext _brainybuddiesDbContext;
 
-        public CoursesController(CourseContext courseContext)
+        public CoursesController(BrainybuddiesDbContext brainybuddiesDbContext)
         {
-            _courseContext= courseContext;
+            _brainybuddiesDbContext= brainybuddiesDbContext;
         }
 
         [HttpGet]
         [Route("GetCourses")]
         public IActionResult GetCourses()
         {
-            List<Course> list = _courseContext.Courses.ToList();
+            List<Course> list = _brainybuddiesDbContext.Courses.ToList();
             return StatusCode(StatusCodes.Status200OK, list);
         }
 
@@ -30,7 +33,7 @@ namespace BrainyBuddies.Controllers
         [Route("GetCourse/{id}")]
         public IActionResult GetCourseById(int id)
         {
-            var course = _courseContext.Courses.FirstOrDefault(c => c.Id == id);
+            var course = _brainybuddiesDbContext.Courses.FirstOrDefault(c => c.Id == id);
             if (course == null)
             {
                 return NotFound();
@@ -48,8 +51,8 @@ namespace BrainyBuddies.Controllers
                 return BadRequest(ModelState);
             }
 
-            _courseContext.Courses.Add(course);
-            _courseContext.SaveChanges();
+            _brainybuddiesDbContext.Courses.Add(course);
+            _brainybuddiesDbContext.SaveChanges();
 
             return StatusCode(StatusCodes.Status201Created);
         }
@@ -58,14 +61,14 @@ namespace BrainyBuddies.Controllers
         [Route("DeleteCourse/{id}")]
         public IActionResult DeleteCourse(int id)
         {
-            var course = _courseContext.Courses.FirstOrDefault(c => c.Id == id);
+            var course = _brainybuddiesDbContext.Courses.FirstOrDefault(c => c.Id == id);
             if (course == null)
             {
                 return NotFound();
             }
 
-            _courseContext.Courses.Remove(course);
-            _courseContext.SaveChanges();
+            _brainybuddiesDbContext.Courses.Remove(course);
+            _brainybuddiesDbContext.SaveChanges();
 
             return Ok();
         }
@@ -79,19 +82,19 @@ namespace BrainyBuddies.Controllers
                 return BadRequest();
             }
 
-            var existingCourse = _courseContext.Courses.FirstOrDefault(c => c.Id == id);
+            var existingCourse = _brainybuddiesDbContext.Courses.FirstOrDefault(c => c.Id == id);
             if (existingCourse == null)
             {
                 return NotFound();
             }
 
-            existingCourse.ImgURL = course.ImgURL;
+            existingCourse.ImgUrl = course.ImgUrl;
             existingCourse.Ime = course.Ime;
             existingCourse.Pisatel = course.Pisatel;
             existingCourse.Predmet = course.Predmet;
             existingCourse.Opis = course.Opis;
 
-            _courseContext.SaveChanges();
+            _brainybuddiesDbContext.SaveChanges();
 
             return Ok();
         }
