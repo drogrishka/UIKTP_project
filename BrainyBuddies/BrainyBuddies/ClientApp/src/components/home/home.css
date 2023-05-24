@@ -1,0 +1,71 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: rgba(223, 237, 214, 0.7);
+    padding: 10px;
+}
+
+.grid-item {
+    display: grid;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+
+}
+
+h3{
+    width: 250px;
+    height: 50px;
+    margin-left: 50%;
+    margin-top: auto;
+    color: rgb(98, 156, 68);
+    font-family: "Times New Roman";
+    font-weight: 400;
+}
+.navigacija {
+    margin-right: 45%;
+    padding-right: 15px;
+    width: 400px;
+    height: 50px;
+}
+
+a{
+    color: orange;
+    font-family: "Times New Roman";
+}
+
+
+
+p:first-of-type{
+    color: rgb(98, 156, 68);
+}
+p{
+    color: orange;
+    font-family: "Times New Roman";
+
+}
+
+button {
+
+    width: 136px;
+    height: 47px;
+    color: white;
+    font-family: "Times New Roman";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    padding: 0px 10px;
+    min-width: 1px;
+    min-height: 1px;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    display: table-cell;
+    word-break: break-word;
+    background-color:rgba(76, 122, 52, 0.8) ;
+}
+
+
+
