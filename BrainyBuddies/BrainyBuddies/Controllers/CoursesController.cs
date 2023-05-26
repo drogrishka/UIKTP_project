@@ -9,7 +9,6 @@ using System.Data;
 
 namespace BrainyBuddies.Controllers
 {
-    [Authorize(Roles ="teacher")]
     [Route("api/[controller]")]
     [ApiController]
     public class CoursesController : ControllerBase
