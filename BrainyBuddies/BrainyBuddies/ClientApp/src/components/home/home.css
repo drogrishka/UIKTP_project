@@ -14,7 +14,7 @@
     grid-template-columns: auto auto;
     background-color: rgba(223, 237, 214, 0.7);
     padding: 10px;
-    height: 100vh;
+    height: 125vh;
   }
   
   .grid-item {
@@ -36,7 +36,6 @@
   
   .navigacija a {
     padding: 1rem;
-    font-size: larger;
   }
   
   a {
@@ -54,6 +53,7 @@
     color: orange;
     font-family: "Times New Roman";
     text-align: center;
+    font-style: italic;
   }
   
   .grid-item button {
@@ -103,7 +103,8 @@
   }
   
   #item2 a {
-    margin-right: 10px;
+    margin-right: 25px;
+    font-size: large;
   }
   
   #item3 img {
