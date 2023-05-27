@@ -4,6 +4,7 @@ import Login from "./Components/login/LoginComponent";
 import Register from "./Components/register/RegisterComponent";
 import Home from "./Components/home/HomeComponent";
 import Quiz from "./Components/quiz/QuizCompoment"
+import QuizResults from "./Components/quiz/QuizResultsComponent";
 const App = () => {
 
     // const [courses, setCourses] = useState([])
@@ -25,6 +26,7 @@ const App = () => {
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
           <Route path='/quiz' element={<Quiz/>}></Route>
+          <Route path='/quiz-results' element={<QuizResults/>}></Route>
         </Routes>
         
         </BrowserRouter>

@@ -22,6 +22,7 @@ const Quiz = () => {
                     <a href='#'>EN</a>
                 </div>
                 <div></div>
+                <div>{username}</div>
             </div>
             <div class="grid-item" id="QuizItem3">
                 <form>
