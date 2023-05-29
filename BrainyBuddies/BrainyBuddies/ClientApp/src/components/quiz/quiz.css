@@ -9,20 +9,20 @@
   font-family: "Times New Roman";
 }
 
-.grid-container {
+.quiz-grid-container {
   display: grid;
   grid-template-columns: auto auto;
   background-color: rgba(223, 237, 214, 0.7);
   padding: 10px;
-  height: auto;
+  height: 100vh;
 }
 
-.grid-item {
+.quiz-grid-item {
   display: grid;
   font-size: 40px;
 }
 
-.grid-item h3 {
+.quiz-grid-item h3 {
   margin: auto 0;
   color: rgb(98, 156, 68);
   font-family: "Times New Roman";
@@ -30,7 +30,7 @@
   font-size: 4rem;
 }
 
-h2{
+.quiz-grid-item h2{
   color: rgb(98, 156, 68);
   font-family: "Times New Roman";
 }
@@ -40,7 +40,7 @@ a {
   font-family: "Times New Roman";
 }
 
-.grid-item button {
+.quiz-grid-item button {
   width: 136px;
   height: 47px;
   color: white;
@@ -91,23 +91,23 @@ a {
   justify-content: start;
   align-items: start;
   margin-left: 25%;
-  margin-top: 5%;
 }
 
-form {
+.quiz-grid-item form {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-
 }
 
 .flex-left{
-  width: 50%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .flex-right{
-  width: 50%;
+  width: 100%;
 }
 
 label{
@@ -120,7 +120,16 @@ legend{
   font-family: "Times New Roman";
 }
 
-input{
+.legend input{
   margin-left: 5%;
+}
+#QuizItem1 a {
+  margin: auto;
+  color: rgba(76, 122, 52, 0.8);;
+}
+#QuizItem1 .icon:hover {
+  margin: auto;
+  color: rgba(76, 122, 52, 0.8);
+  cursor: pointer;
 }
 

@@ -33,7 +33,7 @@ const Home = () => {
         <div></div>
         <div class="navigacija">
           <a href='#'>Home</a>
-          <a href='#'>Lesson Plans</a>
+          <a href='/lessonPlans'>Lesson Plans</a>
           <a href='#'>Quiz</a>
         </div>
       </div>

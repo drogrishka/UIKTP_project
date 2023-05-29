@@ -23,6 +23,8 @@ public partial class BrainybuddiesDbContext : DbContext
 
     public virtual DbSet<Member> Members { get; set; }
 
+    public virtual DbSet<Question> Questions { get; set; }
+
     public virtual DbSet<Quiz> Quizzes { get; set; }
 
     public virtual DbSet<RefreshToken> RefreshTokens { get; set; }
@@ -68,7 +70,7 @@ public partial class BrainybuddiesDbContext : DbContext
 
         modelBuilder.Entity<Lesson>(entity =>
         {
-            entity.HasKey(e => e.IdLesson).HasName("PK__Lesson__BC5E15A032B873D1");
+            entity.HasKey(e => e.IdLesson).HasName("PK__Lesson__BC5E15A0C828DCEE");
 
             entity.ToTable("Lesson");
 
@@ -127,6 +129,40 @@ public partial class BrainybuddiesDbContext : DbContext
                 .HasColumnName("username");
         });
 
+        modelBuilder.Entity<Question>(entity =>
+        {
+            entity.HasKey(e => e.IdQuestion).HasName("PK__Question__2BD92477FED5DF60");
+
+            entity.ToTable("Question");
+
+            entity.Property(e => e.IdQuestion).HasColumnName("id_question");
+            entity.Property(e => e.CorrectAnswer)
+                .HasMaxLength(400)
+                .IsUnicode(false)
+                .HasColumnName("correct_answer");
+            entity.Property(e => e.IdQuiz).HasColumnName("id_quiz");
+            entity.Property(e => e.QuestionText)
+                .HasMaxLength(400)
+                .IsUnicode(false)
+                .HasColumnName("question_text");
+            entity.Property(e => e.WrongQuestion1)
+                .HasMaxLength(400)
+                .IsUnicode(false)
+                .HasColumnName("wrong_question1");
+            entity.Property(e => e.WrongQuestion2)
+                .HasMaxLength(400)
+                .IsUnicode(false)
+                .HasColumnName("wrong_question2");
+            entity.Property(e => e.WrongQuestion3)
+                .HasMaxLength(400)
+                .IsUnicode(false)
+                .HasColumnName("wrong_question3");
+
+            entity.HasOne(d => d.IdQuizNavigation).WithMany(p => p.Questions)
+                .HasForeignKey(d => d.IdQuiz)
+                .HasConstraintName("fk_id_quiz2");
+        });
+
         modelBuilder.Entity<Quiz>(entity =>
         {
             entity.HasKey(e => e.IdQuiz).HasName("PK__Quiz__20800BD155FF8CEE");
@@ -149,7 +185,7 @@ public partial class BrainybuddiesDbContext : DbContext
 
         modelBuilder.Entity<RefreshToken>(entity =>
         {
-            entity.HasKey(e => e.IdToken).HasName("PK__RefreshT__3C2FA9C402BA09DB");
+            entity.HasKey(e => e.IdToken).HasName("PK__RefreshT__3C2FA9C44346238D");
 
             entity.ToTable("RefreshToken");
 
@@ -171,7 +207,7 @@ public partial class BrainybuddiesDbContext : DbContext
 
         modelBuilder.Entity<Score>(entity =>
         {
-            entity.HasKey(e => e.IdScore).HasName("PK__Score__47406A110FB16B9E");
+            entity.HasKey(e => e.IdScore).HasName("PK__Score__47406A119F0AEDFF");
 
             entity.ToTable("Score");
 

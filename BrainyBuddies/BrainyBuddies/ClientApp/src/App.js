@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login from "./Components/login/LoginComponent";
-import Register from "./Components/register/RegisterComponent";
-import Home from "./Components/home/HomeComponent";
-import Quiz from "./Components/quiz/QuizCompoment"
+import Login from "./components/login/LoginComponent";
+import Register from "./components/register/RegisterComponent";
+import Home from "./components/home/HomeComponent";
+import Quiz from "./components/quiz/QuizCompoment"
+import LessonPlans from "./components/lessonPlans/LessonPlansComponent";
 const App = () => {
 
     // const [courses, setCourses] = useState([])
@@ -24,7 +25,8 @@ const App = () => {
           <Route path='/' element={<Home/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
-          <Route path='/quiz' element={<Quiz/>}></Route>
+          <Route path="/quiz/:id" element={<Quiz />} />
+          <Route path='/lessonPlans' element={<LessonPlans/>}></Route>
         </Routes>
         
         </BrowserRouter>

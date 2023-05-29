@@ -14,7 +14,7 @@
     grid-template-columns: auto auto;
     background-color: rgba(223, 237, 214, 0.7);
     padding: 10px;
-    height: 125vh;
+    height: 100vh;
   }
   
   .grid-item {

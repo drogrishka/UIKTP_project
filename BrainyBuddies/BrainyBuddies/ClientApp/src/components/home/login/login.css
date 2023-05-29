@@ -78,6 +78,10 @@
 }
 .icon {
     font-size: 2rem;
+    cursor: pointer;
+}
+.icon:hover {
+    width: 3rem;
 }
 .icons {
     margin: auto 0 auto 1rem;

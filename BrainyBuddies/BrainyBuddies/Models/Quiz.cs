@@ -17,5 +17,7 @@ public partial class Quiz
 
     public virtual Member IdMemberNavigation { get; set; } = null!;
 
+    public virtual ICollection<Question> Questions { get; set; } = new List<Question>();
+
     public virtual ICollection<Score> Scores { get; set; } = new List<Score>();
 }

@@ -1,0 +1,108 @@
+.lesson-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: end;
+    padding: 1rem;
+}
+
+.card {
+    width: 50%;
+    height: 50%;
+}
+
+.card:hover {
+    width: 45%;
+    height: 45%;
+    cursor: pointer;
+    box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.2);
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.card p {
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.dropbtn {
+    background-color: rgb(174, 221, 148);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 12rem;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    justify-items: center;
+    margin: 0 auto 0 0;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 8.5rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: rgb(174, 221, 148);
+    cursor: pointer;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: rgba(102,255,51,.4);
+    color: #3e8e41;
+    font-weight: 600;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.dropdowns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    margin: 0 auto;
+}
+
+.quiz-card button {
+    margin: 3% 30%;
+    border: 2px solid gray;
+    width: 40%;
+    padding: 0.9rem;
+    color: rgba(254, 198, 61, 0.75);
+    background-color: white;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+}
+
+.quiz-card button:hover {
+    background-color: rgba(76, 122, 52, 0.8);
+}
+
+.quizzes-section p {
+    font-size: xx-large;
+    font-weight: 600;
+}
